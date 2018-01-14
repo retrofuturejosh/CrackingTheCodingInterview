@@ -1,7 +1,7 @@
 // Given two strings, write a method to decide if one is a permutation of the other
 
 //solution
-function isPermutation(str1, str2) {
+export function isPermutation(str1, str2) {
     if (str1.length !== str2.length) return false;
     let permCheck = {};
     for (let i = 0; i < str1.length; i++) {

@@ -1,6 +1,6 @@
-const expect = require('chai').expect
+const expect = require('chai').expect;
 
-import { isUnique, isUnique2, isUnique3 } from '../chapter1/1.1_isUnique'
+import { isUnique, isUnique2, isUnique3 } from '../../chapter1/1.1_isUnique';
 
 //Testing for 1.1 isUnique
 describe('1.1 isUnique', function() {
