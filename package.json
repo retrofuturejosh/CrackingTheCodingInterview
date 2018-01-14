@@ -5,13 +5,17 @@
   "main": "1.1 isUnique.js",
   "dependencies": {
     "babel": "^6.23.0",
-    "chai": "^4.1.2"
+    "chai": "^4.1.2",
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.26.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-register": "^6.26.0",
-    "mocha": "^4.1.0"
+    "mocha": "^4.1.0",
+    "chai": "^4.1.2"
   },
   "scripts": {
     "test": "mocha --compilers js:babel-core/register ./test/*"
