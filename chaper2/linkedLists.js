@@ -1,19 +1,19 @@
-class sNode {
-  constuctor(data) {
+class SNode {
+  constructor(data) {
     this.data = data;
     this.next = null;
   }
 }
 
-class singlyLinkedList {
+export class SinglyLinkedList {
   constructor() {
     this.head = null;
     this.length = 0;
   }
 }
 
-singlyLinkedList.prototype.add = (data) => {
-  let nodeToAdd = new sNode(data);
+SinglyLinkedList.prototype.add = function(data) {
+  let nodeToAdd = new SNode(data);
   let currentNode = this.head;
 
   if (!this.head) {
@@ -31,12 +31,13 @@ singlyLinkedList.prototype.add = (data) => {
   return nodeToAdd;
 }
 
-singlyLinkedList.prototype.searchAtPosition = (position) => {
+SinglyLinkedList.prototype.searchAtPosition = function(position) {
   let currentNode = this.head;
   let count = 1;
   let errorMessage = 'Non-existent node';
+  let length = this.length;
 
-  if (this.length === 0 || position > length || position < 1) {
+  if (length === 0 || position > length || position < 1) {
     throw new Error(errorMessage);
   }
 
@@ -48,7 +49,7 @@ singlyLinkedList.prototype.searchAtPosition = (position) => {
   return currentNode
 }
 
-singlyLinkedList.prototype.removeAtPosition = (position) => {
+SinglyLinkedList.prototype.removeAtPosition = function(position) {
   let currentNode = this.head;
   let count = 1;
   let errorMessage = "Non-existent node"
@@ -61,9 +62,9 @@ singlyLinkedList.prototype.removeAtPosition = (position) => {
 
   if (position === 1) {
     this.head = currentNode.next;
-    deletedNode = currentNode;
+    toDelete = currentNode;
     this.length--;
-    return deletedNode;
+    return toDelete;
   }
 
   while(count < position) {
@@ -79,15 +80,15 @@ singlyLinkedList.prototype.removeAtPosition = (position) => {
 }
 
 
-class dNode {
-  constuctor(data) {
+class DNode {
+  constructor(data) {
     this.data = data;
     this.next = null;
     this.prev = null;
   }
 }
 
-class doublyLinkedList {
+export class DoublyLinkedList {
   constructor() {
     this.head = null;
     this.tail = null;
