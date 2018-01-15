@@ -16,7 +16,7 @@ describe('1.3 URLify', () => {
 });
 
 function testSolution(cb) {
-  it('should return true correct string', () => {
+  it('should return correct string', () => {
     expect(cb('Mr John Smith    ', 13)).to.equal('Mr%20John%20Smith');
     expect(cb('Mr John  Smith         ', 14)).to.equal('Mr%20John%20%20Smith');
   });
