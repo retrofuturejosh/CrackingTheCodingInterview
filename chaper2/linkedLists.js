@@ -95,3 +95,41 @@ export class DoublyLinkedList {
     this.length = 0;
   }
 }
+
+DoublyLinkedList.prototype.addToHead = function(val) {
+  let nodeToAdd = new DNode(val);
+  let oldHead;
+
+  if(!this.head) {
+    this.head = nodeToAdd;
+    this.tail = nodeToAdd;
+  }
+  else {
+    this.head.prev = nodeToAdd;
+    oldHead = this.head;
+    this.head = nodeToAdd;
+    this.head.next = oldHead;
+  }
+
+  this.length++;
+  return nodeToAdd;
+}
+
+DoublyLinkedList.prototype.addToTail = function(val) {
+  let nodeToAdd = new DNode(val);
+  let oldTail;
+
+  if(!this.tail) {
+    this.tail = nodeToAdd;
+    this.head = nodeToAdd;
+  }
+  else {
+    oldTail = this.tail;
+    oldTail.next = nodeToAdd;
+    nodeToAdd.prev = oldTail;
+    this.tail = nodeToAdd;
+  }
+
+  this.length++;
+  return nodeToAdd;
+}
