@@ -1,26 +1,27 @@
 //with buffer
 export function removeDups(linkedList) {
-  let currentNode = linkedList.head.next;
-  let valsArr = [linkedList.head.data];
-  let count = 2;
-
   if (linkedList.length < 2) return linkedList;
 
-  while(count <= linkedList.length) {
-    if (valsArr.includes(currentNode.data)){
-      linkedList.removeAtPosition(count);
+  let prevNode = linkedList.head;
+  let currentNode = linkedList.head.next;
+  let valsTable = {};
+  valsTable[linkedList.head.data] = true;
+
+  while(currentNode) {
+    if (valsTable[currentNode.data]){
+      prevNode.next = currentNode.next;
+      linkedList.length--;
     } else {
-      valsArr.push(currentNode.data);
-      count++;
+      valsTable[currentNode.data] = true;
+      prevNode = currentNode;
     }
-    if(currentNode.next) currentNode = currentNode.next;
-    else break;
+    currentNode = currentNode.next;
   }
 
   return linkedList;
 }
 
-//without buffer
+//without buffer, using removeAtPosition prototypical method
 export function removeDupsNoBuffer(linkedList) {
   if (linkedList.length < 2) return linkedList;
   let currentNode = linkedList.head;
@@ -48,4 +49,24 @@ function checkForDups(node, position, linkedList) {
       checkPosition++;
     }
   }
+}
+
+//without buffer optimized
+export function removeDupsOptimized(linkedList) {
+  if(linkedList.length < 2) return linkedList;
+  let current = linkedList.head;
+  let runner;
+
+  while(current) {
+    runner = current;
+    while(runner.next){
+      if (runner.next.data === current.data){
+        runner.next = runner.next.next;
+        linkedList.length--;
+      }
+      else runner = runner.next;
+    }
+    current = current.next;
+  }
+  return linkedList;
 }
