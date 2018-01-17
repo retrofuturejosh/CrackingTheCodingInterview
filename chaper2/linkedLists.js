@@ -8,14 +8,12 @@ class SNode {
   }
 }
 
-
 export class SinglyLinkedList {
   constructor() {
     this.head = null;
     this.length = 0;
   }
 }
-
 
 SinglyLinkedList.prototype.add = function(data) {
   let nodeToAdd = new SNode(data);
@@ -36,7 +34,6 @@ SinglyLinkedList.prototype.add = function(data) {
   return nodeToAdd;
 }
 
-
 SinglyLinkedList.prototype.searchAtPosition = function(position) {
   let currentNode = this.head;
   let count = 1;
@@ -53,7 +50,6 @@ SinglyLinkedList.prototype.searchAtPosition = function(position) {
 
   return currentNode
 }
-
 
 SinglyLinkedList.prototype.removeAtPosition = function(position) {
   let currentNode = this.head;
@@ -95,7 +91,6 @@ function searchByValFunc(val, currentNode) {
 }
 
 
-
 //DOUBLY LINKED LIST
 class DNode {
   constructor(data) {
@@ -105,7 +100,6 @@ class DNode {
   }
 }
 
-
 export class DoublyLinkedList {
   constructor() {
     this.head = null;
@@ -113,7 +107,6 @@ export class DoublyLinkedList {
     this.length = 0;
   }
 }
-
 
 DoublyLinkedList.prototype.addToHead = function(val) {
   let nodeToAdd = new DNode(val);
@@ -133,7 +126,6 @@ DoublyLinkedList.prototype.addToHead = function(val) {
   this.length++;
   return nodeToAdd;
 }
-
 
 DoublyLinkedList.prototype.addToTail = function(val) {
   let nodeToAdd = new DNode(val);
