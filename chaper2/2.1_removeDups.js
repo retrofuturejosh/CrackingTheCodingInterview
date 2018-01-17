@@ -8,9 +8,8 @@ export function removeDups(linkedList) {
 
   while(count <= length) {
     if (valsArr.includes(currentNode.data)){
-      linkedList.deleteAtPosition(count);
+      linkedList.removeAtPosition(count);
       length--;
-      console.log('VALS ARR IS ', valsArr, 'DELETED and new list is ', linkedList.length)
     } else {
       valsArr.push(currentNode.data);
       count++;

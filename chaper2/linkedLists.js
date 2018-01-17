@@ -171,7 +171,7 @@ DoublyLinkedList.prototype.searchAtPosition = function(position) {
   return currentNode;
 }
 
-DoublyLinkedList.prototype.deleteAtPosition = function(position) {
+DoublyLinkedList.prototype.removeAtPosition = function(position) {
   let count = 1;
   let length = this.length;
   let currentNode = this.head;

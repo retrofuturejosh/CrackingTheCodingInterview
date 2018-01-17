@@ -179,13 +179,13 @@ describe('Linked Lists', () => {
       })
     })
 
-    describe('deleteAtPosition method', () => {
+    describe('removeAtPosition method', () => {
       it('properly deletes the correct node', () => {
         let prevNode = linkedListCheck.searchAtPosition(2);
         let nodeToDelete = linkedListCheck.searchAtPosition(3);
         let nextNode = linkedListCheck.searchAtPosition(4);
         expect(linkedListCheck.length).to.equal(6);
-        expect(linkedListCheck.deleteAtPosition(3)).to.equal(nodeToDelete);
+        expect(linkedListCheck.removeAtPosition(3)).to.equal(nodeToDelete);
         expect(linkedListCheck.searchAtPosition(2).next).to.equal(nextNode);
         expect(nextNode.prev).to.equal(prevNode);
         expect(linkedListCheck.length).to.equal(5);
@@ -193,7 +193,7 @@ describe('Linked Lists', () => {
       it('properly deletes the head', () => {
         let oldHead = linkedListCheck.head;
         let newHead = linkedListCheck.head.next;
-        expect(linkedListCheck.deleteAtPosition(1)).to.equal(oldHead);
+        expect(linkedListCheck.removeAtPosition(1)).to.equal(oldHead);
         expect(linkedListCheck.head).to.equal(newHead);
         expect(linkedListCheck.head.prev).to.equal(null);
         expect(linkedListCheck.length).to.equal(4);
@@ -201,7 +201,7 @@ describe('Linked Lists', () => {
       it('properly deletes the tail', () => {
         let oldTail = linkedListCheck.tail;
         let newTail = linkedListCheck.tail.prev;
-        expect(linkedListCheck.deleteAtPosition(4)).to.equal(oldTail);
+        expect(linkedListCheck.removeAtPosition(4)).to.equal(oldTail);
         expect(linkedListCheck.tail).to.equal(newTail);
         expect(linkedListCheck.tail.next).to.equal(null);
         expect(linkedListCheck.length).to.equal(3);
