@@ -1,3 +1,5 @@
+let errorMessage = 'Non-existent node';
+
 class SNode {
   constructor(data) {
     this.data = data;
@@ -5,12 +7,14 @@ class SNode {
   }
 }
 
+
 export class SinglyLinkedList {
   constructor() {
     this.head = null;
     this.length = 0;
   }
 }
+
 
 SinglyLinkedList.prototype.add = function(data) {
   let nodeToAdd = new SNode(data);
@@ -31,10 +35,10 @@ SinglyLinkedList.prototype.add = function(data) {
   return nodeToAdd;
 }
 
+
 SinglyLinkedList.prototype.searchAtPosition = function(position) {
   let currentNode = this.head;
   let count = 1;
-  let errorMessage = 'Non-existent node';
   let length = this.length;
 
   if (length === 0 || position > length || position < 1) {
@@ -49,10 +53,10 @@ SinglyLinkedList.prototype.searchAtPosition = function(position) {
   return currentNode
 }
 
+
 SinglyLinkedList.prototype.removeAtPosition = function(position) {
   let currentNode = this.head;
   let count = 1;
-  let errorMessage = "Non-existent node"
   let prevToDeleted = null;
   let toDelete = null;
 
@@ -88,6 +92,7 @@ class DNode {
   }
 }
 
+
 export class DoublyLinkedList {
   constructor() {
     this.head = null;
@@ -95,6 +100,7 @@ export class DoublyLinkedList {
     this.length = 0;
   }
 }
+
 
 DoublyLinkedList.prototype.addToHead = function(val) {
   let nodeToAdd = new DNode(val);
@@ -115,6 +121,7 @@ DoublyLinkedList.prototype.addToHead = function(val) {
   return nodeToAdd;
 }
 
+
 DoublyLinkedList.prototype.addToTail = function(val) {
   let nodeToAdd = new DNode(val);
   let oldTail;
@@ -132,4 +139,57 @@ DoublyLinkedList.prototype.addToTail = function(val) {
 
   this.length++;
   return nodeToAdd;
+}
+
+DoublyLinkedList.prototype.searchAtPosition = function(position) {
+  let currentNode = this.head;
+  let length = this.length;
+  let count = 1;
+
+  if (position > length || position < 1) {
+    throw new error(errorMessage);
+  }
+
+  while (count < position) {
+    currentNode = currentNode.next;
+    count++;
+  }
+
+  return currentNode;
+}
+
+DoublyLinkedList.prototype.deleteAtPosition = function(position) {
+  let count = 1;
+  let length = this.length;
+  let currentNode = this.head;
+  let toDelete, prevToDeleted, afterDeleted;
+
+  if (position > length || position < 1) {
+    throw new errorMessage(errorMessage);
+  }
+
+  while(count < position) {
+    currentNode = currentNode.next;
+    count++;
+  }
+  
+  toDelete = currentNode;
+
+  if(position === 1) {
+    afterDeleted = currentNode.next;
+    afterDeleted.prev = null;
+    this.head = afterDeleted;
+  } else if (position === length) {
+    prevToDeleted = currentNode.prev;
+    prevToDeleted.next = null;
+    this.tail = prevToDeleted;
+  } else {
+    prevToDeleted = currentNode.prev;
+    afterDeleted = currentNode.next;
+    prevToDeleted.next = afterDeleted;
+    afterDeleted.prev = prevToDeleted;
+  }
+
+  this.length--;
+  return toDelete
 }
