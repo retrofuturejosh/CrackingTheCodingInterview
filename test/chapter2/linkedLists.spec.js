@@ -55,6 +55,12 @@ describe('Linked Lists', () => {
       expect(() => linkedListCheck.removeAtPosition(4)).to.throw(errorMessage);
       expect(() => linkedListCheck.removeAtPosition(0)).to.throw(errorMessage);
     })
+
+    it('should return correct node with searchByValue method', () => {
+      expect(linkedListCheck.searchByValue(checkCheck)).to.equal(linkedListCheck.head);
+      expect(linkedListCheck.searchByValue(newTail).data).to.equal(newTail);
+      expect(() => linkedListCheck.searchByValue('cant find me!')).to.throw(`No node contains cant find me`);
+    })
   })
 
   describe('Doubly Linked List', () => {
@@ -199,6 +205,15 @@ describe('Linked Lists', () => {
         expect(linkedListCheck.tail).to.equal(newTail);
         expect(linkedListCheck.tail.next).to.equal(null);
         expect(linkedListCheck.length).to.equal(3);
+      })
+    })
+
+    describe('searchByValue method', () => {
+      it('should properly return currect node', () => {
+        let magic = 'didnt say the magic word'
+        expect(linkedListCheck.searchByValue('there, ')).to.equal(linkedListCheck.head)
+        expect(linkedListCheck.searchByValue('are')).to.equal(linkedListCheck.tail)
+        expect(() => linkedListCheck.searchByValue(magic)).to.throw(`No node contains ${magic}`);
       })
     })
     

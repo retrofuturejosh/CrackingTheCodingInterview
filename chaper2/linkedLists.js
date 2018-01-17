@@ -1,5 +1,6 @@
 let errorMessage = 'Non-existent node';
 
+//SINGLY LINKED LIST
 class SNode {
   constructor(data) {
     this.data = data;
@@ -83,7 +84,19 @@ SinglyLinkedList.prototype.removeAtPosition = function(position) {
   return toDelete;
 }
 
+SinglyLinkedList.prototype.searchByValue= function(val) {
+  return searchByValFunc(val, this.head)
+}
 
+function searchByValFunc(val, currentNode) {
+  if(currentNode.data === val) return currentNode;
+  else if(!currentNode.next) throw new Error(`No node contains ${val}`);
+  else return searchByValFunc(val, currentNode.next);
+}
+
+
+
+//DOUBLY LINKED LIST
 class DNode {
   constructor(data) {
     this.data = data;
@@ -147,7 +160,7 @@ DoublyLinkedList.prototype.searchAtPosition = function(position) {
   let count = 1;
 
   if (position > length || position < 1) {
-    throw new error(errorMessage);
+    throw new Error(errorMessage);
   }
 
   while (count < position) {
@@ -165,7 +178,7 @@ DoublyLinkedList.prototype.deleteAtPosition = function(position) {
   let toDelete, prevToDeleted, afterDeleted;
 
   if (position > length || position < 1) {
-    throw new errorMessage(errorMessage);
+    throw new Error(errorMessage);
   }
 
   while(count < position) {
@@ -192,4 +205,8 @@ DoublyLinkedList.prototype.deleteAtPosition = function(position) {
 
   this.length--;
   return toDelete
+}
+
+DoublyLinkedList.prototype.searchByValue = function(val) {
+  return searchByValFunc(val, this.head);
 }
