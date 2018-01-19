@@ -1,5 +1,6 @@
 let errorMessage = 'Linked list is not sufficiently long';
 
+//Iterative solution !optimal
 export function returnKthToLast(linkedList, k) {
   let lastNode = linkedList.head;
   let returnNode = linkedList.head;
@@ -17,6 +18,7 @@ export function returnKthToLast(linkedList, k) {
   return returnNode;
 }
 
+//Recursive solution
 export function returnKthToLastRecursive(linkedList, k) {
   let idx = {val: -1};
   let returnNode = findNode(linkedList.head, k, idx);
