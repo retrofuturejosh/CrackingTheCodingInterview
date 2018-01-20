@@ -10,12 +10,12 @@ describe('1.4 Palindrome Permutation', () => {
 function test(description, cb) {
   describe(description, () => {
     it('returns true if string is a palindrome and permutation of original string', () => {
-      expect(cb('Tact coa', 'taco cat')).to.equal(true);
-      expect(cb('Tcat coa', 'atco cta')).to.equal(true);
+      expect(cb('taco cat')).to.equal(true);
+      expect(cb('Toot toot Woot wooT')).to.equal(true);
     })
     it('returns false if not', () => {
-      expect(cb('cat', 'toc')).to.equal(false);
-      expect(cb('cat', 'tac')).to.equal(false);
+      expect(cb('cat')).to.equal(false);
+      expect(cb('HEYYY')).to.equal(false);
     })
   })
 }
