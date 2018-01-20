@@ -27,5 +27,5 @@ export function isUnique(str) {
     let currentPosition = str[0];
     str = str.slice(1);
     if (str.includes(currentPosition)) return false;
-    else return isUnique2(str);
+    else return isUnique3(str);
   }
