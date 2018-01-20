@@ -3,7 +3,7 @@ const expect = require('chai').expect;
 import { SinglyLinkedList, DoublyLinkedList } from '../../chaper2/linkedLists';
 
 //testing for linked lists
-describe('Linked Lists', () => {
+describe('2.0 Linked Lists', () => {
   describe('Singly Linked List', () => {
     let linkedListCheck = new SinglyLinkedList();
     let micCheck = 'Mic Check One Two';
