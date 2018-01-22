@@ -1,7 +1,6 @@
 import { urlify, urlify2, urlify3 } from '../../chapter1/1.3_URLify';
 const expect = require('chai').expect;
 
-//Testing for 1.3 URLify
 describe('1.3 URLify', () => {
 
 //ADD SOLUTIONS FOR TESTING BELOW

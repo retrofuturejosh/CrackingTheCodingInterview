@@ -1,8 +1,7 @@
 import { isPermutation } from '../../chapter1/1.2_isPermutation';
 const expect = require('chai').expect;
 
-//Testing for 1.2 isPermutation
-describe('1.1 isPermutation', () => {
+describe('1.2 Is Permutation', () => {
 
 //ADD SOLUTIONS FOR TESTING BELOW
   test('Solution 1', isPermutation);

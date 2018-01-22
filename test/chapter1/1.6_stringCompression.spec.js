@@ -1,5 +1,4 @@
 import { stringCompression } from '../../chapter1/1.6_stringCompression';
-
 const expect = require('chai').expect;
 
 describe('1.6 String Compression', () => {

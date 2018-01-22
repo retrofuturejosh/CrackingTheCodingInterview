@@ -1,5 +1,4 @@
 import { oneAway } from '../../chapter1/1.5_oneAway';
-
 const expect = require('chai').expect;
 
 describe('1.5 One Away', () => {

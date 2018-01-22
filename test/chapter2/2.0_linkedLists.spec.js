@@ -1,6 +1,5 @@
-const expect = require('chai').expect;
-
 import { SinglyLinkedList, DoublyLinkedList } from '../../chaper2/linkedLists';
+const expect = require('chai').expect;
 
 //testing for linked lists
 describe('2.0 Linked Lists', () => {

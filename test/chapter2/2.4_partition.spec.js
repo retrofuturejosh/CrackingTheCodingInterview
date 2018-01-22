@@ -2,9 +2,7 @@ import { SinglyLinkedList, DoublyLinkedList } from '../../chaper2/linkedLists';
 import { partition, partitionDoublyLL } from '../../chaper2/2.4_partition';
 const expect = require('chai').expect;
 
-let description = 
-
-describe('2.3 Partition', () => {
+describe('2.4 Partition', () => {
 
 //ADD SOLUTIONS FOR TESTING BELOW
   test('Solution 1', partition, partitionDoublyLL);

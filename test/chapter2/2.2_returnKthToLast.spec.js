@@ -2,11 +2,11 @@ import { SinglyLinkedList } from '../../chaper2/linkedLists';
 import { returnKthToLast, returnKthToLastRecursive } from '../../chaper2/2.2_returnKthToLast';
 const expect = require('chai').expect;
 
-describe('2.2 return kth to last', () => {
+describe('2.2 Return kth to Last', () => {
 
 //ADD SOLUTIONS FOR TESTING BELOW
-  test('Iterative solution', returnKthToLast);
-  test('Recursive solution', returnKthToLastRecursive)
+  test('Solution 1: Iterative solution', returnKthToLast);
+  test('Solution 2: Recursive solution', returnKthToLastRecursive)
 })
 
 function test(description, cb) {

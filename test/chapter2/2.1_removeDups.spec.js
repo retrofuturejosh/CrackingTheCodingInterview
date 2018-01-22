@@ -2,16 +2,16 @@ import { DoublyLinkedList, SinglyLinkedList } from '../../chaper2/linkedLists';
 import { removeDups, removeDupsNoBuffer, removeDupsOptimized } from '../../chaper2/2.1_removeDups';
 const expect = require('chai').expect;
 
-describe('2.1 removeDups', () => {
+describe('2.1 Remove Duplicates', () => {
 
 //ADD SOLUTIONS FOR TESTING BELOW
-  test(removeDups, 'Solution 1: remove duplicates using hash table');
-  test(removeDupsNoBuffer, 'Solution 2: remove duplicates without buffer using removeAtPosition method');
-  test(removeDupsOptimized, 'Optimized solution without buffer');
+  test('Solution 1: remove duplicates using hash table', removeDups);
+  test('Solution 2: remove duplicates without buffer using removeAtPosition method', removeDupsNoBuffer);
+  test('Solution 3: Optimized solution without buffer', removeDupsOptimized);
 })
 
-function test(cb, solution) {
-  return describe(solution, () => {
+function test(description, cb) {
+  return describe(description, () => {
     let duplicates = 'duplicateONE'
     let moreDuplicates = 'duplicateTWO'
   

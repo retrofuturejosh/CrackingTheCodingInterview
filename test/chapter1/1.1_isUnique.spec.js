@@ -1,8 +1,7 @@
 import { isUnique, isUnique2, isUnique3 } from '../../chapter1/1.1_isUnique';
 const expect = require('chai').expect;
 
-//Testing for 1.1 isUnique
-describe('1.1 isUnique', () => {
+describe('1.1 Is Unique', () => {
 
 //ADD SOLUTIONS FOR TESTING BELOW
   test('Solution 1', isUnique);

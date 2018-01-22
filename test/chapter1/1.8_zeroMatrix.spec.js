@@ -1,12 +1,11 @@
 import { zeroMatrix, zeroMatrixBrute } from "../../chapter1/1.8_zeroMatrix";
-
 const expect = require('chai').expect;
 
 describe('1.8 Zero Matrix', () => {
 
 //ADD SOLUTIONS FOR TESTING BELOW
-  test('Optimized solution', zeroMatrix);
-  test('Brute force solution', zeroMatrixBrute);
+  test('Solution 1: Optimized solution', zeroMatrix);
+  test('Solution 2: Brute force solution', zeroMatrixBrute);
 })
 
 function test(description, cb) {
