@@ -3,6 +3,8 @@ import { rotateMatrix, rotateMatrix1 } from '../../chapter1/1.7_rotateMatrix';
 const expect = require('chai').expect;
 
 describe('1.7 Rotate Matrix', () => {
+
+//ADD SOLUTIONS FOR TESTING BELOW
    test('solution 1', rotateMatrix);
    test('solution 2', rotateMatrix1);
 });
