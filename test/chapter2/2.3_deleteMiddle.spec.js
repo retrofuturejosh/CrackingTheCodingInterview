@@ -1,6 +1,5 @@
 import { SinglyLinkedList } from '../../chaper2/linkedLists';
 import { deleteMiddle } from '../../chaper2/2.3_deleteMiddle';
-
 const expect = require('chai').expect;
 
 describe('2.3 Delete Middle Node', () => {
