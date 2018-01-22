@@ -1,10 +1,16 @@
 import { SinglyLinkedList } from '../../chaper2/linkedLists';
 import { returnKthToLast, returnKthToLastRecursive } from '../../chaper2/2.2_returnKthToLast';
-
 const expect = require('chai').expect;
 
-function testCode(cb, solution) {
-  return describe(solution, () => {
+describe('2.2 return kth to last', () => {
+
+//ADD SOLUTIONS FOR TESTING BELOW
+  test('Iterative solution', returnKthToLast);
+  test('Recursive solution', returnKthToLastRecursive)
+})
+
+function test(description, cb) {
+  return describe(description, () => {
     let linkedList = new SinglyLinkedList();
     addNodes(linkedList, 4);
   
@@ -20,11 +26,6 @@ function testCode(cb, solution) {
     })
   })
 }
-
-describe('2.2 return kth to last', () => {
-  testCode(returnKthToLast, 'Iterative solution');
-  testCode(returnKthToLastRecursive, 'Recursive solution')
-})
 
 function addNodes(linkedList, num) {
   for(let i = 1; i <= num; i++) {
