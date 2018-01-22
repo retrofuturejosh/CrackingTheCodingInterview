@@ -1,8 +1,9 @@
 import { palindromePermutation, palindromePermutation2 } from '../../chapter1/1.4_palindromePermutation';
-
 const expect = require('chai').expect;
 
 describe('1.4 Palindrome Permutation', () => {
+
+//ADD SOLUTIONS FOR TESTING BELOW
   test('Solution 1', palindromePermutation);
   test('Solution 2', palindromePermutation2);
 })
