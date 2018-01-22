@@ -21,7 +21,7 @@ export function isUnique(str) {
     return true;
   }
   
-  //recursive, mutative, & without additional data structures
+  //recursive for fun
   export function isUnique3(str) {
     if (str.length === 0) return true;
     let currentPosition = str[0];
