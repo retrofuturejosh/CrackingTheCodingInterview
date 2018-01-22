@@ -1,6 +1,6 @@
 # CrackingTheCodingInterview
 
-JavaScript solutions for everyone's favorite interview prep book.
+JavaScript solutions and testing for everyone's favorite interview prep book.
 
 For testing:
 
