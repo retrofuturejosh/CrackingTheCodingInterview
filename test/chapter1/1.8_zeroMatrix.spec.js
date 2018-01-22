@@ -3,6 +3,8 @@ import { zeroMatrix, zeroMatrixBrute } from "../../chapter1/1.8_zeroMatrix";
 const expect = require('chai').expect;
 
 describe('1.8 Zero Matrix', () => {
+
+//ADD SOLUTIONS FOR TESTING BELOW
   test('Optimized solution', zeroMatrix);
   test('Brute force solution', zeroMatrixBrute);
 })

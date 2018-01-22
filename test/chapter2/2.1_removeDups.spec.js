@@ -1,10 +1,17 @@
 import { DoublyLinkedList, SinglyLinkedList } from '../../chaper2/linkedLists';
 import { removeDups, removeDupsNoBuffer, removeDupsOptimized } from '../../chaper2/2.1_removeDups';
-
 const expect = require('chai').expect;
 
-function checkCode(cb, solution) {
-  return describe(`${solution}`, () => {
+describe('2.1 removeDups', () => {
+
+//ADD SOLUTIONS FOR TESTING BELOW
+  test(removeDups, 'Solution 1: remove duplicates using hash table');
+  test(removeDupsNoBuffer, 'Solution 2: remove duplicates without buffer using removeAtPosition method');
+  test(removeDupsOptimized, 'Optimized solution without buffer');
+})
+
+function test(cb, solution) {
+  return describe(solution, () => {
     let duplicates = 'duplicateONE'
     let moreDuplicates = 'duplicateTWO'
   
@@ -19,8 +26,8 @@ function checkCode(cb, solution) {
         expect(doublyLL.length).to.equal(4);
         cb(doublyLL);
         expect(doublyLL.length).to.equal(2);
-        // expect(doublyLL.head).to.equal(head);
-        // expect(doublyLL.tail.data).to.equal(duplicates);
+        expect(doublyLL.head).to.equal(head);
+        expect(doublyLL.tail.data).to.equal(duplicates);
       })
     
       it('should not remove any nodes in doubly linked list if none are duplicates', () => {
@@ -49,9 +56,3 @@ function checkCode(cb, solution) {
    
   })
 }
-
-describe('2.1 removeDups', () => {
-  checkCode(removeDups, 'Solution 1: remove duplicates using hash table');
-  checkCode(removeDupsNoBuffer, 'Solution 2: remove duplicates without buffer using removeAtPosition method');
-  checkCode(removeDupsOptimized, 'Optimized solution without buffer');
-})

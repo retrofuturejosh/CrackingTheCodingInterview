@@ -216,6 +216,5 @@ describe('2.0 Linked Lists', () => {
         expect(() => linkedListCheck.searchByValue(magic)).to.throw(`No node contains ${magic}`);
       })
     })
-    
   })
 })
