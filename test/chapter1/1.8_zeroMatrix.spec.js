@@ -28,7 +28,9 @@ function test(description, cb) {
        [1, 2],
        [1, 2],];
 
-    let matrix3 = [[1, 2, 3, 4, 0, 5, 6, 7], [1, 2, 3, 4, 5, 6, 7, 8]];
+    let matrix3 = 
+      [[1, 2, 3, 4, 0, 5, 6, 7],
+       [1, 2, 3, 4, 5, 6, 7, 8]];
 
     it('properly sets entire row and column to zero', () => {
       expect(cb(matrix)).to.deep.equal(matrixSolution);
