@@ -1,6 +1,5 @@
-const expect = require('chai').expect;
-
 import { isPermutation } from '../../chapter1/1.2_isPermutation';
+const expect = require('chai').expect;
 
 //Testing for 1.2 isPermutation
 describe('1.1 isPermutation', () => {
